@@ -1,0 +1,28 @@
+name: ESPresense Companion Test
+version: 1.0.27
+slug: espresense-companion-test
+description: Home Assistant Add-on for precise BLE device tracking and ESPresense node management on a home floorplan
+url: https://espresense.com/companion
+# image: espresense/espresense-companion
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+map:
+  - config:rw
+host_network: true
+ingress: true
+ingress_port: 8267
+ingress_stream: true
+panel_icon: mdi:alpha-e-circle
+panel_title: ESPresense
+homeassistant_api: true
+services:
+  - mqtt:want
+ports:
+  8267/tcp: null
+  8268/tcp: null
+ports_description:
+  8267/tcp: UI
+  8268/tcp: Firmware Updates

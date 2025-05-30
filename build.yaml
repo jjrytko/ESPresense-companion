@@ -1,0 +1,3 @@
+args:
+  TARGETPLATFORM: linux/amd64
+  BUILDPLATFORM: linux/amd64

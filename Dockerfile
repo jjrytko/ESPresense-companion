@@ -1,7 +1,7 @@
-# Build stage
-FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
+# Build stage
+FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
 
 # Install Node.js
 RUN apt-get update && apt-get install -y ca-certificates curl gnupg && \
